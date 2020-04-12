@@ -29,7 +29,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="http://132.145.97.54/">
+      <Link color="inherit" href="http://140.238.145.70/">
       BigDataBlog
       </Link>{' '}
       {new Date().getFullYear()}
