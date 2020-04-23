@@ -94,7 +94,8 @@ class Main extends Component {
         this.state = {
             currencies: [],
             redirect: false,
-            redirectConvert: false
+            redirectConvert: false,
+            redirectExchange: false
         };
 	}
     componentDidMount() {
@@ -128,6 +129,18 @@ class Main extends Component {
         if (this.state.redirectConvert) {
         this.props.history.push(`/convert`)
             return <Redirect to='/convert' />
+        }
+    }
+
+    setRedirectExchange = () => {
+        this.setState({
+          redirectExchange: true
+        })
+    }
+    renderRedirectExchange = () => {
+        if (this.state.redirectExchange) {
+        this.props.history.push(`/exchange`)
+            return <Redirect to='/exchange' />
         }
     }
 
@@ -228,10 +241,12 @@ class Main extends Component {
                     </Typography>
                   </div>
                   <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                  {this.renderRedirectExchange()}
                     <Button
                       color="primary"
                       variant="contained"
                       className={classes.actionButtom}
+                      onClick={this.setRedirectExchange}
                     >
                       点击查看
                     </Button>

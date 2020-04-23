@@ -4,6 +4,7 @@ import Dashboard from './components/Dashboard'
 import Main from './components/Main'
 import CNY from './components/CNY'
 import CONVERT from './components/CONVERT'
+import CHANGE from './components/CHANGE'
 import ScrollToTop from './components/ScrollTop'
 
 export default props => (
@@ -14,6 +15,7 @@ export default props => (
           <Route exact path='/dashboard' component={ Dashboard } />
           <Route exact path='/cny' component={ CNY } />
           <Route exact path='/convert' component={ CONVERT } />
+          <Route exact path='/exchange' component={ CHANGE } />
         </Switch>
       </ScrollToTop>
     </HashRouter>
